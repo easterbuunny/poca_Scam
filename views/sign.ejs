@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SCAM - Connexion / Inscription</title>
+  <%- include('header'); %>
+  <script>
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '1087124664242-of5f89slsg7othj3lmvq3qbu126pa58k.apps.googleusercontent.com',
+          // Scopes to request in addition to 'profile' and 'email'
+          //scope: 'additional_scope'
+        });
+      });
+    }
+  </script>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <%- include('navbar'); %>
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+            <section class="vh-100">
+                <div class="container-fluid h-custom">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                      <img src="images/draw2.png" class="img-fluid" alt="Sign Decore image">
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-4 offset-xl-1">
+                        <h1>Connexion</h1>
+                        <!-- Pills content -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                                <form method="post"> <!-- modifiable -->
+                                    
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                      <label class="form-label" for="loginName">Email</label>
+                                    <input type="email" id="loginName" class="form-control" />
+                                    </div>
+                            
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                      <label class="form-label" for="loginPassword">Mot de passe</label>
+                                    <input type="password" id="loginPassword" class="form-control" />
+                                    </div>
+                            
+                                    <!-- Submit button -->
+                                    <button type="submit" class="btn btn-outline-dark btn-block mb-4">Se connecter</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Pills content -->
+                  </div>
+                </div>
+              </section>
+            </div>
+        </div>
+    </div>
+
+    <%- include('script'); %>
+</body>
+</html>
